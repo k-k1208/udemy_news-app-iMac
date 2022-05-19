@@ -1696,6 +1696,11 @@
   "resolved" "https://registry.npmjs.org/@sideway/pinpoint/-/pinpoint-2.0.0.tgz"
   "version" "2.0.0"
 
+"@tensorflow-models/mobilenet@^2.1.0":
+  "integrity" "sha512-JjqT9ijHDFA2FEpUGWg7H2lQ0GrMuE2VmiCRBYmUew6b4JKht8LXDjG5HxZh95YH6c/25sZWTpGeHbquloH+hw=="
+  "resolved" "https://registry.npmjs.org/@tensorflow-models/mobilenet/-/mobilenet-2.1.0.tgz"
+  "version" "2.1.0"
+
 "@tensorflow/tfjs-backend-cpu@~3.11.0", "@tensorflow/tfjs-backend-cpu@3.17.0":
   "integrity" "sha512-alfmaPLnsa/DvkhnPoX/r9ZVDcSuRZUJEElaG3o84JrCBOqzq2jcFwaT9KxchN8rDLmKjJMLQkcQx/bSp/Oz4w=="
   "resolved" "https://registry.npmjs.org/@tensorflow/tfjs-backend-cpu/-/tfjs-backend-cpu-3.17.0.tgz"
@@ -1716,12 +1721,12 @@
     "@types/webgl2" "0.0.6"
     "seedrandom" "2.4.3"
 
-"@tensorflow/tfjs-converter@3.17.0":
+"@tensorflow/tfjs-converter@^3.1.0", "@tensorflow/tfjs-converter@3.17.0":
   "integrity" "sha512-AlnIg7aKtfiFq7/ZrWDsVgaw82Uig2KLJY2MOAwadpI4OqhKwwArFHVbVBiOhAEHmp6obwwYaGtItmSM+dzlUQ=="
   "resolved" "https://registry.npmjs.org/@tensorflow/tfjs-converter/-/tfjs-converter-3.17.0.tgz"
   "version" "3.17.0"
 
-"@tensorflow/tfjs-core@~3.11.0", "@tensorflow/tfjs-core@3.17.0":
+"@tensorflow/tfjs-core@^3.1.0", "@tensorflow/tfjs-core@~3.11.0", "@tensorflow/tfjs-core@3.17.0":
   "integrity" "sha512-PMqEDysVy3WsSK4pU+UaoINRjps1RTF2CPvS1sWgOJqc/rUz8mSMibMosti0Is6DHGw7UiAq53y9VMuzQRVJqA=="
   "resolved" "https://registry.npmjs.org/@tensorflow/tfjs-core/-/tfjs-core-3.17.0.tgz"
   "version" "3.17.0"
