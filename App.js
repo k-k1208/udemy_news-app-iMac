@@ -5,6 +5,7 @@ import * as tf from "@tensorflow/tfjs";
 import * as mobilenet from '@tensorflow-models/mobilenet';
 import { cameraWithTensors } from '@tensorflow/tfjs-react-native';
 
+// iosの場合はheight:1920, androidの場合はheight:1200
 const textureDims = Platform.OS === 'ios' ?
   {
     height: 1920,
@@ -16,10 +17,12 @@ const textureDims = Platform.OS === 'ios' ?
   };
 
 let frame = 0;
-const computeRecognitionEveryNFrames = 60;
+const computeRecognitionEveryNFrames = 60;//60フレームごとに認識を計算（ここで認識速度決められる）
 
+//Tensorflowの拡張カメラを使用
 const TensorCamera = cameraWithTensors(Camera);
 
+//Tensorflowの初期化
 const initialiseTensorflow = async () => {
   await tf.ready();
   tf.getBackend();
@@ -30,7 +33,7 @@ export default function App() {
   const [detections, setDetections] = useState([]);
   const [net, setNet] = useState();
 
-
+  //Stream：配信
   const handleCameraStream = (images) => {
     const loop = async () => {
       if(net) {
@@ -83,12 +86,12 @@ export default function App() {
         resizeHeight={200}
         resizeWidth={152}
         resizeDepth={3}
-        autorender={true}
+        autorender={true}//Tensorflowがリアルタイムでカメラを保持する
       />
       <View style={styles.text}>
-      {detections.map((detection, index) => 
-          <Text key={index}>{detection}</Text>
-      )}
+        {detections.map((detection, index) => 
+            <Text key={index}>{detection}</Text>
+        )}
       </View>
     </View>
   );
